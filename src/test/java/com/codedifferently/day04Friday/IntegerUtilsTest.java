@@ -53,4 +53,18 @@ public class IntegerUtilsTest {
         // : Then
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void reverseDigitsTest2() {
+        // : Given
+        Integer input = 876945;
+        Integer expected = 549678;
+
+        // : When
+        Integer actual = IntegerUtils.reverseDigits(input);
+
+        // : Then
+        Assert.assertEquals(expected, actual);
+    }
+
 }

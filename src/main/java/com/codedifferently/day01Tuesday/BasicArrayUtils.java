@@ -1,12 +1,16 @@
 package com.codedifferently.day01Tuesday;
 
+import java.sql.SQLOutput;
+
 public class BasicArrayUtils {
     /**
      * @param stringArray an array of String objects
      * @return the first element in the array
      */
     public static String getFirstElement(String[] stringArray) {
-        return null;
+
+        return stringArray[0];
+
     }
 
     /**
@@ -14,7 +18,7 @@ public class BasicArrayUtils {
      * @return the second element in the array
      */
     public static String getSecondElement(String[] stringArray) {
-        return null;
+        return stringArray[1];
     }
 
     /**
@@ -22,7 +26,15 @@ public class BasicArrayUtils {
      * @return stringArray with the elements in reverse order
      */
     public static String[] reverse(String[] stringArray) {
-        return null;
+        String[] reverseArray = new String[stringArray.length];
+        int i; //counter for string array
+        int j = 0; //counter for reverse Array
+
+        for (i = stringArray.length - 1; i >= 0; i--) {
+            reverseArray[j] = stringArray[i];
+            j++;
+        }
+        return reverseArray;
     }
 
     /**
@@ -30,6 +42,15 @@ public class BasicArrayUtils {
      * @return String made up of the first character in each element of stringArray
      */
     public static String getFirstLetterOfEachElement(String[] stringArray) {
-        return null;
+        String firstLetters = "";
+        int i;
+
+        for(i = 0; i< stringArray.length; i++) {
+             firstLetters += stringArray[i].charAt(0);
+
+        }
+            return firstLetters;
     }
 }
+
+// for loop, grab first element, grab first letter, store in a string
